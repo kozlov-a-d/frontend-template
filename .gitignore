@@ -1,0 +1,6 @@
+*.DS_Store
+/.idea/
+/node_modules/
+/public/*.html
+/public/assets/build/
+/public/assets/build-dev/
