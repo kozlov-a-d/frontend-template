@@ -1,32 +1,88 @@
-var Encore = require('@symfony/webpack-encore');
-// var path = require('path');
+const Encore = require('@symfony/webpack-encore');
+const path = require('path');
+const fs = require('fs');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const BrowserSyncPlugin = require('browser-sync-webpack-plugin');
 
 if (!Encore.isRuntimeEnvironmentConfigured()) {
     Encore.configureRuntimeEnvironment(process.env.NODE_ENV || 'dev');
 }
 
-Encore
-    .setOutputPath((!Encore.isProduction()) ? 'public/assets/build-dev' : 'public/assets/build')
-    .setPublicPath((!Encore.isProduction()) ? '/assets/build-dev' : '/assets/build')
-    .enableVersioning(Encore.isProduction())
-    .addEntry('homepage', './frontend/assets/scripts/homepage.js')
-    // .addEntry('pages', './frontend/assets/scripts/pages.js')
-    .disableSingleRuntimeChunk()
-    // .addAliases({
-    //     '~blocks': path.resolve(__dirname, `frontend/assets/blocks/`),
-    //     '~styles': path.resolve(__dirname, `frontend/assets/styles/`), 
-    //     '~scripts': path.resolve(__dirname, `frontend/assets/scripts/`),
-    //     '~vendor': path.resolve(__dirname, `frontend/assets/vendor/`),
-    //     '~images': path.resolve(__dirname, `frontend/assets/images/`),
-    // })
-    // .configureCssLoader((cfg) => { 
-    //     cfg.url = false; 
-    // })
-    // .enablePostCssLoader((options) => {
-    //     options.config = {
-    //         path: './'
-    //     };
-    // })
-    // .enableSassLoader()
+const myPath = {
+    html: {
+        entry: ['./frontend/pages'],
+        resolve: 'frontend/pages/',
+    },
+    dist: './public',
+};
 
-module.exports = Encore.getWebpackConfig();
+function generateHtmlPlugins(templateDir) {
+    const templateFiles = fs.readdirSync(path.resolve(__dirname, templateDir));
+    return templateFiles
+        .filter((item) => item.split('.')[0][0] !== '_' && item.split('.')[1])
+        .map((item) => {
+            const parts = item.split('.');
+            const name = parts[0];
+            const extension = parts[1];
+            return new HtmlWebpackPlugin({
+                filename: `../../${name}.html`,
+                template: path.resolve(__dirname, `${templateDir}/${name}.${extension}`),
+                inject: false,
+            });
+        });
+}
+
+Encore.setOutputPath(!Encore.isProduction() ? 'public/assets/build-dev' : 'public/assets/build')
+    .setPublicPath(!Encore.isProduction() ? '/assets/build-dev' : '/assets/build')
+    .cleanupOutputBeforeBuild()
+    .enableVersioning(Encore.isProduction())
+    .addEntry('homepage', './frontend/scripts/homepage.ts')
+    .addEntry('pages', './frontend/scripts/pages.ts')
+    .addEntry('demo', './frontend/scripts/demo.ts')
+    .addStyleEntry('critical', './frontend/styles/critical.scss')
+    .disableSingleRuntimeChunk()
+    .splitEntryChunks()
+    .configureSplitChunks((splitChunks) => {
+        splitChunks.name = 'common';
+        splitChunks.minSize = 0;
+    })
+    .enableTypeScriptLoader()
+    .enableSassLoader()
+    .configureCssLoader((cfg) => {
+        cfg.url = false;
+    })
+    .enablePostCssLoader((options) => {
+        options.config = {
+            path: './',
+        };
+    })
+    .addLoader({
+        test: /\.twig$/,
+        use: ['twig-loader'],
+    })
+    .addLoader({
+        test: /\.html$/,
+        include: path.resolve(__dirname, myPath.html.resolve),
+        use: ['raw-loader'],
+    });
+
+if (!Encore.isProduction()) {
+    Encore.addPlugin( new BrowserSyncPlugin({
+        host: 'localhost',
+        port: 3000,
+        server: { baseDir: [myPath.dist] }
+    }))
+}
+const config = Encore.getWebpackConfig();
+
+const htmlPlugins = (() => {
+    let results = [];
+    myPath.html.entry.forEach((item) => {
+        results = results.concat(generateHtmlPlugins(item));
+    });
+    return results;
+})();
+
+config.plugins = config.plugins.concat(htmlPlugins);
+
+module.exports = config;

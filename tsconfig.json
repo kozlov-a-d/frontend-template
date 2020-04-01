@@ -1,0 +1,18 @@
+{
+    "compilerOptions": {
+        "module": "commonjs",
+        "noImplicitAny": true,
+        "outDir": "./public/assets",
+        "allowJs": true,
+        "target": "es5",
+        "esModuleInterop": true,
+        "downlevelIteration": true,
+    },
+    "include": [
+        "frontend/scripts/**/*", "frontend/scripts/pages.ts", "frontend/scripts/homepage.ts", "frontend/core"
+    ],
+    "exclude": [
+        "node_modules",
+        "**/*.spec.ts"
+    ]
+}

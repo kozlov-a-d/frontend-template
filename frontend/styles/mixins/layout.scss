@@ -1,0 +1,24 @@
+/**
+ * Центрирует контентный блок определённой ширины
+ * по умолчанию $content-width
+ */
+@mixin l-container($max-content-width: $content-width) {
+    width: auto;
+    max-width: 100%;
+    margin: 0 $content-gap;
+    
+    @media (min-width: $max-content-width + $content-gap * 2) {
+        width: 100%;
+        max-width: $max-content-width;
+        margin: 0 auto;
+    }
+}
+
+/**
+ * Делает блок на всю ширину экрана
+ */
+@mixin l-fullwidth() {
+    width: 100vw;
+    margin-left: 50%;
+    transform: translate(-50%); 
+}

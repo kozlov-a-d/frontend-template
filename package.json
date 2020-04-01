@@ -7,22 +7,36 @@
     "license": "MIT",
     "scripts": {
         "build": "yarn encore dev",
+        "build-prod": "yarn encore production",
         "watch": "yarn encore dev --watch",
         "serve": "yarn encore dev --watch",
         "eslint": "node_modules/.bin/eslint frontend/assets/scripts",
         "test:unit": ""
     },
     "eslint.packageManager": "yarn",
-    "dependencies": {},
+    "dependencies": {
+        "normalize.css": "^8.0.1"
+    },
     "devDependencies": {
         "@symfony/webpack-encore": "^0.28.3",
+        "autoprefixer": "^9.7.5",
         "babel-eslint": "^10.1.0",
+        "browser-sync": "^2.26.7",
+        "browser-sync-webpack-plugin": "^2.2.2",
         "eslint": "^6.8.0",
         "eslint-config-airbnb-base": "^14.0.0",
         "eslint-config-prettier": "^6.10.0",
         "eslint-plugin-import": "^2.20.1",
         "eslint-plugin-prettier": "^3.1.2",
         "eslint-plugin-promise": "^4.2.1",
-        "eslint-plugin-sonarjs": "^0.5.0"
+        "eslint-plugin-sonarjs": "^0.5.0",
+        "html-webpack-plugin": "^4.0.2",
+        "node-sass": "^4.13.1",
+        "postcss-loader": "^3.0.0",
+        "postcss-scss": "^2.0.0",
+        "sass-loader": "^7.0.1",
+        "ts-loader": "^5.3.0",
+        "twig-loader": "^0.5.1",
+        "typescript": "^3.8.3"
     }
 }

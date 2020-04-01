@@ -1,0 +1,16 @@
+@import '../../styles/variables.scss';
+@import '../../styles/mixins/index.scss'; 
+
+.demo-text-invert{
+    @include text-color-invert;
+    background: #16181F;
+
+    &__container{
+        @include l-container;
+        padding: 20px 0 40px;
+
+        @media (min-width: $mobile) {
+            padding: 40px 0 60px;
+        }
+    }
+}

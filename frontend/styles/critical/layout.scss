@@ -1,0 +1,44 @@
+ .l{
+    &-wrapper{
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        min-height: 100vh;
+    }
+
+    &-header{
+        position: relative;
+        z-index: 10;
+        width: 100%;
+    }
+
+    &-main{
+        position: relative;
+        z-index: 5;
+        flex: 1 0 auto;
+        width: 100%;
+        
+        .inner-page & {
+            padding-bottom: 50px;
+        }
+    }
+
+    &-footer{
+        position: relative;
+        width: 100%;
+    }
+
+    &-content {
+        display: block;
+        padding: 0 0 60px;
+    }
+
+    &-container {
+        @include l-container;
+    }
+
+    &-fullwidth {
+        @include l-fullwidth;
+    }
+}

@@ -1,0 +1,9 @@
+@import '../../styles/variables.scss';
+@import '../../styles/mixins/index.scss'; 
+
+.demo-buttons{
+    &__container{
+        @include l-container;
+        padding: 40px 0;
+    }
+}

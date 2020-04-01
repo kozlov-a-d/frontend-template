@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<!-- <html lang="ar" dir="rtl"> -->
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}{% endblock %}</title>
+    {% include './common/_meta.twig' %}
+    <link rel="preconnect" href="https://fonts.gstatic.com/" />
+    <link rel="shortcut icon" href="assets/favicon.ico">
+    <link rel="stylesheet" href="assets/build-dev/critical.css">
+</head>
+
+<body  class="{% block body_class %}inner-page{% endblock %}">
+
+{% include './common/_variables.twig' %}
+
+<!-- begin wrapper -->
+<div class="l-wrapper">
+
+    <header class="l-header">
+    {% block header %} {% include '../blocks/header/header.twig' %} {% endblock %}
+    </header>
+
+    <main class="l-main">
+        {% block main %}
+            <!-- Twig Documentation https://twig.symfony.com/doc/2.x/  -->
+            Content of the page...
+        {% endblock %}
+    </main>
+
+    <footer class="l-footer">
+    {% block footer %} {% include '../blocks/footer/footer.twig' %} {% endblock %}
+    </footer>
+
+</div><!-- end wrapper -->
+
+<!-- <button class="scroll-top js-scroll-top">
+    <img src="/assets/images/icons/scroll-top.svg" alt="to top">
+</button> -->
+
+{% block styles %}
+    <link rel="stylesheet" href="assets/build-dev/common.css">
+    <link rel="stylesheet" href="assets/build-dev/pages.css">
+{% endblock %}
+{% block scripts %}
+    <script src="assets/build-dev/runtime.js"></script>
+    <script src="assets/build-dev/common.js"></script>
+    <script src="assets/build-dev/pages.js"></script>
+{% endblock %}
+</body>
+</html>
