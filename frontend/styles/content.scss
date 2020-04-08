@@ -2,6 +2,10 @@
 @import './mixins/index.scss'; 
 
 @import './content/buttons.scss';
+@import './content/display.scss';
+@import './content/grid.scss';
+@import './content/order.scss';
+@import './content/response-img.scss';
 
 .is-success{
     border: 2px solid $color-success;
