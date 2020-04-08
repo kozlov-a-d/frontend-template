@@ -2,6 +2,7 @@
 const autoprefixer = require('autoprefixer');
 // const mqpacker = require('css-mqpacker');
 // const sortCSSmq = require('sort-css-media-queries');
+const csso = require('postcss-csso');
 
 // let myplugin = postcss.plugin('myplugin', function myplugin() {
 //     return function (css, result) {
@@ -24,6 +25,7 @@ module.exports = {
     plugins:[
         // mqpacker({ sort: sortCSSmq.desktopFirst }),
         autoprefixer,
-        // myplugin
+        // myplugin,
+        csso
     ]
 };
