@@ -7,7 +7,7 @@
 /**
  * @include text-color-invert;
  */
- @import './content.scss'; 
+ @import './text.scss'; 
  
 /**
  * @include grid($grid-gap);
@@ -15,3 +15,9 @@
  * @include grid-col-offset($grid-width, $grid-gap);
  */
  @import './grid.scss'; 
+
+
+ /**
+  *
+  */
+ @import './buttons.scss'; 

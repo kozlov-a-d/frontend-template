@@ -1,11 +1,12 @@
 {% extends "./_layout.twig" %}
 
 {# Настройки #}
-{% block title %}Home page | Example.com {% endblock %}
-{% block body_class %}home-page{% endblock %}
-
+{% block title %}Landing | Example.com {% endblock %}
+{% block header %} {% include '../blocks/header-landing/header-landing.twig' %} {% endblock %}
 
 {% block main %}
+    {% include '../blocks/hero-usp/hero-usp.twig' %}
+
     <div class="l-container">
 
         <br>
@@ -17,12 +18,12 @@
 
 {% block styles %}
     <link rel="stylesheet" href="assets/build-dev/common.css">
-    <link rel="stylesheet" href="assets/build-dev/homepage.css">
+    <link rel="stylesheet" href="assets/build-dev/landing.css">
     <link rel="stylesheet" href="assets/build-dev/content.css">
 {% endblock %}
 
 {% block scripts %}
     {#<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" ></script>#}
     <script src="assets/build-dev/common.js"></script>
-    <script src="assets/build-dev/homepage.js"></script>
+    <script src="assets/build-dev/landing.js"></script>
 {% endblock %}

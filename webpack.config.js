@@ -39,7 +39,9 @@ Encore.setOutputPath(!Encore.isProduction() ? 'public/assets/build-dev' : 'publi
     .addEntry('homepage', './frontend/scripts/homepage.ts')
     .addEntry('pages', './frontend/scripts/pages.ts')
     .addEntry('demo', './frontend/scripts/demo.ts')
+    .addEntry('landing', './frontend/scripts/landing.ts')
     .addStyleEntry('critical', './frontend/styles/critical.scss')
+    .addStyleEntry('content', './frontend/styles/content.scss')
     .disableSingleRuntimeChunk()
     .splitEntryChunks()
     .configureSplitChunks((splitChunks) => {

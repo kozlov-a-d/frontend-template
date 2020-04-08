@@ -6,14 +6,15 @@
 
 {% block main %}
     {% include '../blocks/demo-colors/demo-colors.twig' %}
+    {% include '../blocks/demo-buttons/demo-buttons.twig' %}
     {% include '../blocks/demo-text/demo-text.twig' %}
     {% include '../blocks/demo-text-invert/demo-text-invert.twig' %}
-    {% include '../blocks/demo-buttons/demo-buttons.twig' %}
 {% endblock %}
 
 {% block styles %}
     <link rel="stylesheet" href="assets/build-dev/common.css">
     <link rel="stylesheet" href="assets/build-dev/demo.css">
+    <link rel="stylesheet" href="assets/build-dev/content.css">
 {% endblock %}
 
 {% block scripts %}
