@@ -39,11 +39,23 @@
 @mixin btn-border($color-default, $color-hover: $color-default){
     border: $btn-border-width solid $color-default;
     padding: 0 $btn-padding - $btn-border-width;
+    line-height: $btn-height - 2*$btn-border-width;
     @if $color-hover != $color-default {
         &:hover {
             border-color: $color-hover;
         }
     }
+}
+
+@mixin btn-center(){
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 250px;
+}
+
+@mixin btn-fullwidth(){
+    width: 100%;
 }
 
 @mixin btn-primary(){

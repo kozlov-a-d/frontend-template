@@ -44,19 +44,23 @@
             @include btn;
             @include btn-primary;
         }
+
         &-secondary{
             @include btn;
             @include btn-secondary;
         }
+
         &-whatsapp{
             @include btn;
             @include btn-whatsapp;
         }
+
         &-custom-filled{
             @include btn;
             @include btn-fill($color-primary-light, $color-secondary-light);
             @include btn-color(#fff);
         }
+
         &-custom-bordered{
             @include btn;
             @include btn-fill(#fff, $color-secondary-dark);
@@ -75,6 +79,25 @@
             @include btn-fill(#fff, $color-secondary-dark);
             @include btn-border($color-secondary, $color-secondary-dark);
             @include btn-color($color-secondary, #fff);
+        }
+
+        &-custom-filled-icon-double{
+            @include btn;
+            @include btn-fill($color-primary-light, $color-secondary-light);
+            @include btn-color(#fff);
+        }
+
+        &-primary-center{
+            @include btn;
+            @include btn-primary;
+            @include btn-center;
+            width: 200px;
+        }
+
+        &-primary-fullwidth{
+            @include btn;
+            @include btn-primary;
+            @include btn-fullwidth;
         }
     }
 

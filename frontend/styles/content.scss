@@ -2,3 +2,13 @@
 @import './mixins/index.scss'; 
 
 @import './content/buttons.scss';
+
+.is-success{
+    border: 2px solid $color-success;
+}
+.is-warn{
+    border: 2px solid $color-warn;
+}
+.is-danger{
+    border: 2px solid $color-danger;
+}

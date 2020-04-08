@@ -63,4 +63,12 @@
             @include btn-color($color-success, #fff);
         }
     }
+
+    &-center {
+        @include btn-center;
+    }
+
+    &-fullwidth {
+        @include btn-fullwidth;
+    }
 }

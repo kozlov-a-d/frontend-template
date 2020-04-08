@@ -16,6 +16,14 @@
             <a class="btn-warn-border" href="#">btn-warn</a>
             <a class="btn-success-border" href="#">btn-success</a>
         </div>
+        <br>
+        <div>
+            <a class="btn-primary btn-center" href="#">btn-primary + btn-center</a>
+        </div>
+        <br>
+        <div>
+            <a class="btn-primary btn-fullwidth" href="#">btn-primary + btn-fullwidth</a>
+        </div>
         <h2>Buttons class (mixin)</h2>
         <div class="demo-buttons__list">
             <div class="demo-buttons__item">
@@ -32,7 +40,7 @@
                     <pre>@include btn-secondary;</pre>
                 </code>
             </div>
-            <div class="demo-buttons__item">
+            <div class="demo-buttons__item is-danger">
                 <a class="demo-buttons__btn-whatsapp" href="">WhatsApp</a>
                 <code class="demo-buttons__item-code">
                     <pre>@include btn;</pre>
@@ -56,22 +64,44 @@
                     <pre>@include btn-color($color-secondary, #fff);</pre>
                 </code>
             </div>
-            <div class="demo-buttons__item">
+            <div class="demo-buttons__item is-danger">
                 <a class="demo-buttons__btn-custom-filled-icon-left" href="">with icon left</a>
                 <code class="demo-buttons__item-code">
                     <pre>@include btn;</pre>
                     <pre></pre>
                 </code>
             </div>
-            <div class="demo-buttons__item">
+            <div class="demo-buttons__item is-danger">
                 <a class="demo-buttons__btn-custom-bordered-icon-right" href="">with icon right</a>
                 <code class="demo-buttons__item-code">
                     <pre>@include btn;</pre>
                     <pre></pre>
                 </code>
             </div>
-            <!-- centered -->
-            <!-- fullwidth -->
+            <div class="demo-buttons__item is-danger">
+                <a class="demo-buttons__btn-custom-filled-icon-double" href="">with icon right</a>
+                <code class="demo-buttons__item-code">
+                    <pre>@include btn;</pre>
+                    <pre></pre>
+                </code>
+            </div>
+            <div class="demo-buttons__item">
+                <a class="demo-buttons__btn-primary-center" href="">Center</a>
+                <code class="demo-buttons__item-code">
+                    <pre>@include btn;</pre>
+                    <pre>@include btn-primary;</pre>
+                    <pre>@include btn-center;</pre>
+                    <pre>width: 200px;  // default width: 250px</pre>
+                </code>
+            </div>
+            <div class="demo-buttons__item">
+                <a class="demo-buttons__btn-primary-fullwidth" href="">Fullwidth</a>
+                <code class="demo-buttons__item-code">
+                    <pre>@include btn;</pre>
+                    <pre>@include btn-primary;</pre>
+                    <pre>@include btn-fullwidth;</pre>
+                </code>
+            </div>
         </div>
     </div>
 </div>
