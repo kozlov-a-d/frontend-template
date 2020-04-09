@@ -1,5 +1,3 @@
-$total-columns: 8; // число колонок
-
 .grid{
     display: flex;
     flex-wrap: wrap;
@@ -7,6 +5,8 @@ $total-columns: 8; // число колонок
 
     margin-left: -$grid-gap/2;
     margin-right: -$grid-gap/2;
+
+    overflow: hidden; 
 
     [class *= "col-"] {
         margin-left: $grid-gap/2;
@@ -27,7 +27,8 @@ $total-columns: 8; // число колонок
 /*==========================================================================================*/
 /*  Генерируем классы для инлайнового варианта  */
 /*==========================================================================================*/
-@mixin grid-sizer($screen-prefix){
+
+@mixin grid-sizer($total-columns, $screen-prefix){
     $col-widths: ();   // вспомогательный массив, в котором будут храниться размеры
     // генерируем дробные размеры
     @for $i from 1 through $total-columns {
@@ -55,22 +56,17 @@ $total-columns: 8; // число колонок
         }
     }
 }
-@mixin grid-sizer-media($breakpoints){
+
+@mixin grid-sizer-media($total-columns, $breakpoints){
     // проходим про всем разрешениям и генерируем медиа запросы
     @each $screen-prefix, $screen-size in $breakpoints {
         @media (min-width: $screen-size) {
-            @include grid-sizer($screen-prefix);
+            @include grid-sizer($total-columns, $screen-prefix);
         }
     }
 }
 
-@include grid-sizer('');
-/**
-*  Media query
-*/
-@include grid-sizer-media($breakpoints);
-@media (min-width: 320px) {
-    .grid {
-        overflow: hidden; 
-    }
+@mixin grid-init($total-count) {
+    @include grid-sizer($total-count, '');
+    @include grid-sizer-media($total-count, $breakpoints);
 }

@@ -7,6 +7,8 @@
 @import './content/order.scss';
 @import './content/response-img.scss';
 
+@include grid-init(10); // задаем количество колонок по умолчанию
+
 .is-success{
     border: 2px solid $color-success;
 }
