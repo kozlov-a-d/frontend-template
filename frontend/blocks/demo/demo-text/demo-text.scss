@@ -1,9 +1,7 @@
-@import '../../styles/variables.scss';
-@import '../../styles/mixins/index.scss'; 
+@import '../../../styles/variables.scss';
+@import '../../../styles/mixins/index.scss'; 
 
-.demo-text-invert{
-    @include text-color-invert;
-    background: #16181F;
+.demo-text{
 
     &__container{
         @include l-container;

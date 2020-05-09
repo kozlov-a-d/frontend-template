@@ -1,10 +1,10 @@
-@import '../../styles/variables.scss';
-@import '../../styles/mixins/index.scss'; 
+@import '../../../styles/variables.scss';
+@import '../../../styles/mixins/index.scss'; 
 
 .demo-colors{
     $gap: $text-margin;
-    border-top: 1px solid $color-disable;
-    border-bottom: 1px solid $color-disable;
+    // border-top: 1px solid $color-disable;
+    // border-bottom: 1px solid $color-disable;
 
     &__container{
         @include l-container;

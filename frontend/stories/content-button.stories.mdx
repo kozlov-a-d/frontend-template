@@ -1,0 +1,61 @@
+import { storiesOf } from '@storybook/html';
+import { select, text, withKnobs } from '@storybook/addon-knobs';
+import { Meta, Story, Preview } from '@storybook/addon-docs/blocks';
+import '../styles/critical.scss';
+import '../styles/content.scss';
+
+export const knobs = {
+  label: text("Label", "Hello Storybook")
+};
+
+<Meta title="Content/Button" />
+
+# Buttons
+
+With `MDX` we can define a story for `Checkbox` right in the middle of our
+markdown documentation.
+
+
+<Story name="default" height="100px">
+    {() => {
+        const textButton = text('text', 'I\'m button');
+        const classList = {
+            'btn-primary': 'btn-primary',
+            'btn-secondary': 'btn-secondary',
+            'btn-danger': 'btn-danger',
+            'btn-warn': 'btn-warn',
+            'btn-success': 'btn-success',
+        }
+        let html = '';
+        Object.keys(classList).forEach((classname) => {
+            html += `<button class="${classname}">${classname}</button>`;
+        });
+        /* const className = select('classname', classList, 'btn-primary'); */
+        /* return `<button class="${className}">${textButton}</button>`; */
+        return html;
+    }}
+</Story>
+
+<Story name="borderd" height="100px">
+    {() => {
+        const textButton = text('text', 'I\'m button');
+        const classList = {
+            'btn-primary': 'btn-primary',
+            'btn-secondary': 'btn-secondary',
+            'btn-danger': 'btn-danger',
+            'btn-warn': 'btn-warn',
+            'btn-success': 'btn-success',
+        }
+        let html = '';
+        Object.keys(classList).forEach((classname) => {
+            html += `<button class="${classname}-border">${classname}-border</button>`;
+        });
+        /* const className = select('classname', classList, 'btn-primary'); */
+        /* return `<button class="${className}">${textButton}</button>`; */
+        return html;
+    }}
+</Story>
+
+<Story name="test" height="100px">
+    {({ label }) => `<button>{label}</button>`}
+</Story>
