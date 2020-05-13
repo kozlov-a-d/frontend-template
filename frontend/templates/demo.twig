@@ -5,9 +5,12 @@
 {% block body_class %}demo-page{% endblock %}
 
 {% block main %}
+    {% include '../blocks/demo/demo-component-spoiler/demo-component-spoiler.twig' %}
+    
+    {% include '../blocks/demo/demo-text/demo-text.twig' %}
     {% include '../blocks/demo/demo-colors/demo-colors.twig' %}
     {% include '../blocks/demo/demo-buttons/demo-buttons.twig' %}
-    {% include '../blocks/demo/demo-text/demo-text.twig' %}
+    
     {% include '../blocks/demo/demo-text-invert/demo-text-invert.twig' %}
 {% endblock %}
 

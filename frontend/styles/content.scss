@@ -1,6 +1,10 @@
 @import './variables.scss';
 @import './mixins/index.scss'; 
 
+@import './base/normalize.scss';
+@import './base/layout.scss'; 
+@import './base/text.scss'; 
+
 @import './content/buttons.scss';
 @import './content/display.scss';
 @import './content/grid.scss';

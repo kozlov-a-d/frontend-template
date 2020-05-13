@@ -10,8 +10,8 @@ if (!Encore.isRuntimeEnvironmentConfigured()) {
 
 const myPath = {
     html: {
-        entry: ['./frontend/pages'],
-        resolve: 'frontend/pages/',
+        entry: ['./frontend/templates'],
+        resolve: 'frontend/templates/',
     },
     dist: './public',
 };
@@ -40,7 +40,6 @@ Encore.setOutputPath(!Encore.isProduction() ? 'public/assets/build-dev' : 'publi
     .addEntry('pages', './frontend/scripts/pages.ts')
     .addEntry('demo', './frontend/scripts/demo.ts')
     .addEntry('landing', './frontend/scripts/landing.ts')
-    .addStyleEntry('critical', './frontend/styles/critical.scss')
     .addStyleEntry('content', './frontend/styles/content.scss')
     .disableSingleRuntimeChunk()
     .splitEntryChunks()

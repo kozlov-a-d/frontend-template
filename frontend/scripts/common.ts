@@ -1,15 +1,12 @@
 import '../styles/main.scss';
+import App from '../core/app';
 
-import DarvinApp from '../core/app';
-import SpoilerComponent from '../components/spoiler';
-
-const App = new DarvinApp();
 // @ts-ignore
 window.App = App;
 
-new SpoilerComponent({
-    selector: '.js-spoiler'
-});
+import Spoiler from '../components/spoiler';
+App.initComponent(Spoiler, '.js-spoiler');
+
 
 // App.on('test', () => {console.info('testtt')});
 // App.trigger('test');
@@ -19,5 +16,5 @@ new SpoilerComponent({
 //     max: 1023, // конец интервала
 //     onEnter: function(){
 //         console.info('addMediaQuery test')
-//     } 
+//     }
 // })

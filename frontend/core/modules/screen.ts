@@ -27,10 +27,14 @@ export default class ScreenModule {
                 this.triggerMediaQuery(query);
             });
         }, 200);
-        window.addEventListener('resize', () => {
-            this.screenSize = this.ckeckScreenSize();
-            this.onResize();
-        });
+        window.addEventListener(
+            'resize',
+            () => {
+                this.screenSize = this.ckeckScreenSize();
+                this.onResize();
+            },
+            { passive: true }
+        );
     }
 
     public static getInstance(): ScreenModule {
@@ -62,7 +66,7 @@ export default class ScreenModule {
             if (typeof query.onEach === 'function') query.onEach();
         } else {
             // onExit
-            if (query.isEntered) { query.onExit(); }
+            if (query.isEntered) query.onExit();
             query.isEntered = false;
         }
     }

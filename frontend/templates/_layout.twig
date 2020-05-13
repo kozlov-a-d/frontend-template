@@ -7,7 +7,12 @@
     {% include './common/_meta.twig' %}
     <link rel="preconnect" href="https://fonts.gstatic.com/" />
     <link rel="shortcut icon" href="assets/favicon.ico">
-    <link rel="stylesheet" href="assets/build-dev/critical.css">
+    
+    {% block styles %}
+    <link rel="stylesheet" href="assets/build-dev/common.css">
+    <link rel="stylesheet" href="assets/build-dev/pages.css">
+    <link rel="stylesheet" href="assets/build-dev/content.css">
+    {% endblock %}
 </head>
 
 <body  class="{% block body_class %}inner-page{% endblock %}">
@@ -38,11 +43,6 @@
     <img src="/assets/images/icons/scroll-top.svg" alt="to top">
 </button> -->
 
-{% block styles %}
-    <link rel="stylesheet" href="assets/build-dev/common.css">
-    <link rel="stylesheet" href="assets/build-dev/pages.css">
-    <link rel="stylesheet" href="assets/build-dev/content.css">
-{% endblock %}
 {% block scripts %}
     <script src="assets/build-dev/common.js"></script>
     <script src="assets/build-dev/pages.js"></script>

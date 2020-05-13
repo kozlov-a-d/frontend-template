@@ -3,25 +3,40 @@ import EventEmitterMixin from './mixins/event-emitter';
 import ScreenModule from './modules/screen';
 import Benchmarks from './utils/benchmark';
 
+Benchmarks.start('App');
+
 /** Main class */
-class App {
+class DarvinApp {
     debagMode: boolean;
     screen: ScreenModule; 
 
     constructor(){
-        Benchmarks.start('App');
         this.debagMode = true;
         this.screen = ScreenModule.getInstance(); 
-        Benchmarks.end('App');
     }
 
     /** Get info about debug mode status. */
-    info(text: string): void {
+    public info(text: string): void {
         console.info(`debagMode is ${this.debagMode} ${text}`);
+    }
+
+    public initComponent(component: any, selector: string, options?: {[key: string]: any}, requestIdlecallback?: boolean) {
+        document.addEventListener('DOMContentLoaded', () => {
+            document.querySelectorAll(selector).forEach((element) => {
+                Benchmarks.start(component.name);
+                const instance = new component(element as HTMLElement, {data: { isOpen: true }});
+                Benchmarks.end(component.name);
+                Benchmarks.info();
+            });
+        }, { passive: true });
     }
 }
 
-interface App extends EventEmitterMixin {}
-applyMixins(App, [EventEmitterMixin]);
+interface DarvinApp extends EventEmitterMixin {}
+applyMixins(DarvinApp, [EventEmitterMixin]);
+
+const App = new DarvinApp();
+
+Benchmarks.end('App');
 
 export default App;
