@@ -9,8 +9,8 @@ const defaults: ComponentDefaultOptions = {
     data: {
         isOpen: false,
         isToggleText: false,
-        textOpen: '',
-        textClose: ''
+        textOpen: null,
+        textClose: null
     } 
 }
 
@@ -37,11 +37,15 @@ export default class Spoiler extends Component {
     public open() {
         this.elements.content.style.height = `${this.elements.content.dataset.height}px`;
         this.data.isOpen = true;
+        this.root.classList.add('is-open');
+        if (this.data.isToggleText) this.elements.btn.innerHTML = this.data.textOpen as string;
     }
 
     public close() {
         this.elements.content.style.height = '0';
         this.data.isOpen = false;
+        this.root.classList.remove('is-open');
+        if (this.data.isToggleText) this.elements.btn.innerHTML = this.data.textClose as string;
     }
 
     public toggle(){

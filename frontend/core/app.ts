@@ -24,7 +24,7 @@ class DarvinApp {
         document.addEventListener('DOMContentLoaded', () => {
             document.querySelectorAll(selector).forEach((element) => {
                 Benchmarks.start(component.name);
-                const instance = new component(element as HTMLElement, {data: { isOpen: true }});
+                const instance = new component(element as HTMLElement, {});
                 Benchmarks.end(component.name);
                 Benchmarks.info();
             });
