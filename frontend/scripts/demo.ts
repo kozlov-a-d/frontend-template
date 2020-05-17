@@ -1,5 +1,5 @@
 import Benchmarks from '../core/utils/benchmark';
-Benchmarks.enable();
+// Benchmarks.enable();
 Benchmarks.start('All Script');
 
 Benchmarks.start('Common Scripts');

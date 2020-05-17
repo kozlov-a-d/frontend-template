@@ -112,21 +112,3 @@ p+ul,
 p+ol {
     margin-top: -($text-margin - 3px);
 }
-
-
-/*====================================================================================================================*/
-/*                                                     Other                                                          */
-/*====================================================================================================================*/
-code{
-    display: block;
-    padding: 5px;
-    background: #f7f7f7;
-    border-radius: $block-border-radius;
-    margin-top: $text-margin;
-    overflow-y: scroll;
-
-    pre{
-        margin: 3px 0;
-        font-size: 80%;
-    }
-}

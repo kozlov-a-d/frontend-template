@@ -21,14 +21,14 @@ class DarvinApp {
     }
 
     public initComponent(component: any, selector: string, options?: {[key: string]: any}, requestIdlecallback?: boolean) {
-        document.addEventListener('DOMContentLoaded', () => {
-            document.querySelectorAll(selector).forEach((element) => {
-                Benchmarks.start(component.name);
-                const instance = new component(element as HTMLElement, {});
-                Benchmarks.end(component.name);
-                Benchmarks.info();
-            });
-        }, { passive: true });
+        // document.addEventListener('DOMContentLoaded', () => {
+        document.querySelectorAll(selector).forEach((element) => {
+            Benchmarks.start(component.name);
+            const instance = new component(element as HTMLElement, {});
+            Benchmarks.end(component.name);
+            Benchmarks.info();
+        });
+        // }, { passive: true });
     }
 }
 
