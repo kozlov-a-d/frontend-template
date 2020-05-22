@@ -7,6 +7,9 @@ window.App = App;
 import Spoiler from '../components/spoiler';
 App.initComponent(Spoiler, '.js-spoiler');
 
+import Slider from '../components/slider';
+App.initComponent(Slider, '.js-slider');
+
 
 // App.on('test', () => {console.info('testtt')});
 // App.trigger('test');

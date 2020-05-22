@@ -26,7 +26,7 @@ export default class Component {
     }
 
     protected findElementsBySelectors() {
-        let elements: { [key: string]: HTMLElement } = {};
+        let elements: { [key: string]: HTMLElement} = {};
         Object.keys(this.selectors).forEach((selector) => {
             const element = this.root.querySelector(this.selectors[selector]);
             if (element) elements[selector] = element as HTMLElement;
