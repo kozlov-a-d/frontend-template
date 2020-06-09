@@ -39,6 +39,7 @@ Encore.setOutputPath(!Encore.isProduction() ? 'public/assets/build-dev' : 'publi
     .addEntry('homepage', './frontend/scripts/homepage.ts')
     .addEntry('pages', './frontend/scripts/pages.ts')
     .addEntry('demo', './frontend/scripts/demo.ts')
+    .addEntry('builder', './frontend/scripts/builder.ts')
     .addEntry('landing', './frontend/scripts/landing.ts')
     .addStyleEntry('content', './frontend/styles/content.scss')
     .disableSingleRuntimeChunk()
@@ -57,6 +58,7 @@ Encore.setOutputPath(!Encore.isProduction() ? 'public/assets/build-dev' : 'publi
             path: './',
         };
     })
+    .enableVueLoader()
     .addLoader({
         test: /\.twig$/,
         use: ['twig-loader'],

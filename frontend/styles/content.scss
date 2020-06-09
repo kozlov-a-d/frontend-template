@@ -10,6 +10,7 @@
 @import './content/grid.scss';
 @import './content/order.scss';
 @import './content/response-img.scss';
+@import './content/section.scss';
 
 @include grid-init(10); // задаем количество колонок по умолчанию
 
