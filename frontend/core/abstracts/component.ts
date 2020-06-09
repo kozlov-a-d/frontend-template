@@ -11,7 +11,6 @@ export default class Component {
     name: String;
     data: { [key: string]: string | boolean };
     selectors: { [key: string]: string };
-    elements: { [key: string]: HTMLElement };
 
     constructor(root: HTMLElement, defaults: ComponentDefaultOptions, options?: {}) {
         this.root = root;
@@ -23,16 +22,6 @@ export default class Component {
         this.selectors = currentOptions.selectors; 
         // Корректируем значения this.data, при наличии data-атрибутов
         this.checkDataAttrsOptions();
-    }
-
-    protected findElementsBySelectors() {
-        let elements: { [key: string]: HTMLElement} = {};
-        Object.keys(this.selectors).forEach((selector) => {
-            const element = this.root.querySelector(this.selectors[selector]);
-            if (element) elements[selector] = element as HTMLElement;
-            else throw `[${this.name}] can't found element ${this.selectors[selector]}`;
-        });
-        return elements;
     }
     
     private checkDataAttrsOptions() {

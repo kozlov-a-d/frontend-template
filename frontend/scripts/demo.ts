@@ -16,6 +16,7 @@ import '../blocks/demo/demo-buttons/demo-buttons';
 import '../blocks/demo/demo-section/demo-section';
 
 import '../blocks/demo/demo-component-spoiler/demo-component-spoiler';
+import '../blocks/demo/demo-component-tabs/demo-component-tabs';
 import '../blocks/demo/demo-component-slider/demo-component-slider';
 
 Benchmarks.end('All Script');

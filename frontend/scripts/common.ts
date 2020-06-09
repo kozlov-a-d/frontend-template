@@ -10,6 +10,9 @@ App.initComponent(Spoiler, '.js-spoiler');
 import Slider from '../components/slider';
 App.initComponent(Slider, '.js-slider');
 
+import Tabs from '../components/tabs';
+App.initComponent(Tabs, '.js-tabs');
+
 
 // App.on('test', () => {console.info('testtt')});
 // App.trigger('test');
