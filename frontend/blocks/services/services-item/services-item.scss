@@ -1,0 +1,58 @@
+@import '../../../styles/variables.scss';
+@import '../../../styles/mixins.scss'; 
+
+.services-item{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    background: rgb(236, 236, 236);
+        
+    &__img {
+        @include l-block-ratio(0.83);
+
+        a {
+            @include l-block-full;
+        }
+
+        img {
+            @include l-img-full;
+        }
+    }
+
+    &__info {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        padding: 15px 20px 20px;
+    }
+
+    &__title {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        min-height: 50px;
+        padding-bottom: 10px;
+    }
+
+    &__price {
+        text-align: center;
+        margin-bottom: 10px;
+
+        &-curr{
+            font-weight: bold;
+        }
+
+        &-full{
+            text-decoration: line-through;
+        }
+    }
+
+    &__btn-buy {
+        @include btn;
+        @include btn-primary;
+        @include btn-center;
+    }
+}

@@ -1,0 +1,39 @@
+{%  set products = [ {
+    img: 'http://via.placeholder.com/384x320/f9f9f9/000000',
+    title: 'Плотная рубашка из эластичной джинсовой ткани',
+    price: { curr: '5 999', full: '6 000'}
+},{
+    img: 'http://via.placeholder.com/384x320/f9f9f9/000000',
+    title: 'Плотная рубашка',
+    price: '5 999'
+},{
+    img: 'http://via.placeholder.com/384x320/f9f9f9/000000',
+    title: 'Плотная рубашка',
+    price: { curr: '5 999', full: '6 000'}
+},{
+    img: 'http://via.placeholder.com/384x320/f9f9f9/000000',
+    title: 'Плотная рубашка',
+    price: { curr: '5 999', full: '6 000'}
+},{
+    img: 'http://via.placeholder.com/384x320/f9f9f9/000000',
+    title: 'Плотная рубашка из эластичной джинсовой ткани',
+    price: { curr: '5 999', full: '6 000'}
+},{
+    img: 'http://via.placeholder.com/384x320/f9f9f9/000000',
+    title: 'Плотная рубашка',
+    price: '5 999'
+},{
+    img: 'http://via.placeholder.com/384x320/f9f9f9/000000',
+    title: 'Плотная рубашка',
+    price: { curr: '5 999', full: '6 000'}
+},{
+    img: 'http://via.placeholder.com/384x320/f9f9f9/000000',
+    title: 'Плотная рубашка',
+    price: { curr: '5 999', full: '6 000'}
+}] %}
+
+<div class="services-list">
+    {% for item in products %}
+        {% include '../services-item/services-item.twig' with {'item': item, 'class': 'services-list', 'mod': ''} %}  
+    {% endfor %}
+</div><!-- end .services-list -->

@@ -1,0 +1,39 @@
+/**
+ * @include l-container(?400px);
+ * @include l-fullwidth;
+ * @include l-block-ratio($ratio:1/2);
+ * @include l-block-full($position:absolute);
+ * @include l-img-full($position:absolute, $size:cover);
+ */
+@import './mixins/layout.scss';
+
+/**
+ * @include text-color-invert;
+ */
+ @import './mixins/text.scss'; 
+ 
+/**
+ * @include grid($grid-gap);
+ * @include grid-col($grid-width, $grid-gap);
+ * @include grid-col-offset($grid-width, $grid-gap);
+ */
+@import './mixins/grid.scss'; 
+
+/**
+ * @include btn()
+ * @include btn-color($color-default, $color-hover: $color-default)
+ * @include btn-fill($color-default, $color-hover)
+ * @include btn-border($color-default, $color-hover: $color-default)
+ * @include btn-center();
+ * @include btn-fullwidth();
+ * 
+ * @include btn-primary();
+ * @include btn-secondary();
+ * @include btn-whatsapp();
+ */
+@import './mixins/buttons.scss'; 
+
+/**
+ *
+ */
+@import './mixins/section.scss'; 
