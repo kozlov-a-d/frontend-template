@@ -4,6 +4,8 @@ import App from '../core/app';
 // @ts-ignore
 window.App = App;
 
+App.modules.lazyLoadImages.use('.js-img-lazy')
+
 import Spoiler from '../components/spoiler';
 App.initComponent(Spoiler, '.js-spoiler');
 
@@ -24,3 +26,27 @@ App.initComponent(Tabs, '.js-tabs');
 //         console.info('addMediaQuery test')
 //     }
 // })
+
+// включить лейзи лоад. задать класс
+// const ImgLazy = '';
+// App.initModule(ImgLazy, {
+//     selector: '.js-img-lazy'
+// });
+
+// // включить аякс отправку формы ( задать класс, задать экшены и колбэки)
+// const AjaxForm = '';
+// App.initModule(AjaxForm, {
+//     selector: '.form.js-ajax',
+//     recaptcha: false,
+//     actions: {
+//         successSubmit: () => {
+
+//         }
+//     }
+// });
+
+// const Goals = '';
+// App.initModule(Goals, {
+//     selector: '.form.js-ajax',
+//     recaptcha: false
+// });
