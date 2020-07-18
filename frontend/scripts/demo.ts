@@ -9,6 +9,8 @@ Benchmarks.end('Common Scripts');
 import '../blocks/header/header';
 import '../blocks/footer/footer';
 
+import '../blocks/gallery/gallery-widget-scroll/gallery-widget-scroll';
+
 import '../blocks/demo/demo-colors/demo-colors';
 import '../blocks/demo/demo-text/demo-text';
 import '../blocks/demo/demo-text-invert/demo-text-invert'; 

@@ -1,0 +1,56 @@
+{%  set gallery = [ {
+    img: 'https://via.placeholder.com/450x300',
+    title: 'Some title #1',
+    url: '#'
+},{
+    img: 'https://via.placeholder.com/450x300',
+    title: 'Some title #2',
+    url: '#'
+},{
+    img: 'https://via.placeholder.com/450x300',
+    title: 'Some title #3',
+    url: '#'
+},{    
+    img: 'https://via.placeholder.com/450x300',
+    title: 'Some title #4',
+    url: '#'
+},{    
+    img: 'https://via.placeholder.com/450x300',
+    title: 'Some title #5',
+    url: '#'
+},{    
+    img: 'https://via.placeholder.com/450x300',
+    title: 'Some title #6',
+    url: '#'
+},{    
+    img: 'https://via.placeholder.com/450x300',
+    title: 'Some title #7',
+    url: '#'
+},{
+    img: 'https://via.placeholder.com/450x300',
+    title: 'Some title #8',
+    url: '#'
+}] %}
+
+
+<div class="l-fullwidth">
+    <div class="l-container">
+        <h2>gallery-widget-scroll</h2>
+    </div>
+    <div class="gallery-widget-scroll">
+        <div class="gallery-widget-scroll__row">
+            <div class="gallery-widget-scroll__row-inner">
+            {% for item in gallery %}
+                <div class="gallery-widget-scroll__tile">
+                    <div class="gallery-widget-scroll__tile-media">
+                        <img class="gallery-widget-scroll__tile-img" src="{{item.img}}" alt="{{item.title}}" title="{{item.img}}" />
+                    </div>
+                    <div class="gallery-widget-scroll__tile-details">
+                        <div class="gallery-widget-scroll__tile-title">{{item.title}}</div>
+                    </div>
+                </div>
+            {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>

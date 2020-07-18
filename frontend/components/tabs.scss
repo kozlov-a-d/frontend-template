@@ -15,15 +15,11 @@
             display: block;
             width: 100%;
             padding: 10px 20px;
-            margin-right: 0;
-            margin-top: 5px;
-            margin-bottom: 5px;
             border: 1px solid $color-text;
             cursor: pointer;
             
             @media (min-width: $switchToMobile) {
                 padding: 5px 20px;
-                margin-right: 10px;
             }
 
             &.is-active {
