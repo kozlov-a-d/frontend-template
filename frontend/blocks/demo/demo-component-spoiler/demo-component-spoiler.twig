@@ -1,0 +1,25 @@
+<div class="l-container">
+    <h2>Spolier</h2>
+    <h3>Спойлер</h3>
+    <p>Спойлер можно использовать без каких либо стилей, а для оформление кнопки брать соответствующие класс (например <b>btn-primary-border</b>). Тут имеет смысл добавить дата-аттрибуты, меняющие текст при открытии/закрытии спойлера</p>
+    <ul>
+        <li><b>data-is-toggle-text="true"</b></li>
+        <li><b>data-text-open="Close"</b></li>
+        <li><b>data-text-close="Read more"</b></li>
+    </ul>
+    <div class="js-spoiler" data-is-toggle-text="true" data-text-open="Close" data-text-close="Read more">
+        <div data-spoiler-content>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Mollitia nostrum recusandae aliquid molestias nobis nam culpa est doloribus quia. Enim eius dignissimos sapiente nostrum quos porro, officia itaque autem quisquam deserunt iusto vel facilis.</p>
+        </div>
+        <button class="btn-primary-border" data-spoiler-btn>toggle btn</button>
+    </div>
+    <br>
+    <p>spoiler with custom data-attrs</p>
+    <div class="spoiler js-spoiler" >
+        <button class="spoiler__btn-toggle" data-spoiler-btn>toggle btn</button>
+        <div class="spoiler__content" data-spoiler-content>
+            <div>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Mollitia nostrum recusandae aliquid molestias nobis nam culpa est doloribus quia. Enim eius dignissimos sapiente nostrum quos porro, officia itaque autem quisquam deserunt iusto vel facilis.</div>
+            <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit et iusto ullam mollitia distinctio numquam amet. Temporibus sapiente maiores, amet quos atque labore aliquid fugiat?</div>
+        </div>
+    </div>
+</div>

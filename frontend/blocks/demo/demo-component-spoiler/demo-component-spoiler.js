@@ -1,0 +1,1 @@
+import './demo-component-spoiler.scss';

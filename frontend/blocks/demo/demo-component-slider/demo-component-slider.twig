@@ -1,0 +1,45 @@
+{%  set slides = [ {
+    img: 'https://via.placeholder.com/1920x496?text=slide+1',
+    name: 'Payment After Results Only',
+    description: '',
+    url: '#'
+},{
+   img: 'https://via.placeholder.com/1920x496?text=slide+2',
+    name: 'We have proven results! All our client websites are on 1st page',
+    description: 'Experience unparalleled luxury onboard Sunseeker and Benetti Yachts from the exclusive Bulgari Resort and Residences',
+    url: '#'
+},{
+    img: 'https://via.placeholder.com/1920x496?text=slide+3',
+    name: 'Unique Offer for Dubai Companies. Payment After Rank',
+    description: 'Experience unparalleled luxury onboard Sunseeker and Benetti Yachts from the exclusive Bulgari Resort and Residences',
+    url: '#'
+}] %}
+
+
+<div class="l-container">
+    <h2>Slider</h2>
+    <div class="slider js-slider">
+        <div class="slider__wrapper" data-slider-items>
+            {% for item in slides %}
+            <div class="slider__item">
+                {% if item.url %}<a href="{{ item.url }}">{% endif %}
+                <!-- Размер слайдов 1920x496 -->
+                <picture> 
+                    <source srcset="/assets/images/pixel.png" media="(max-width: 800px)">
+                    <img class="slider__item-img" src="{{ item.img }}" data-src="" alt="{{ item.name }}" title="{{ item.name }}">
+                </picture>
+                {% if item.url %}</a>{% endif %}
+                <div class="slider__item-text">
+                    {% if item.name %}<p class="-title">{{ item.name }}</p>{% endif %}
+                    {# {% if item.description %}<p>{{ item.description }}</p>{% endif %} #}
+                    {# {% if item.url %}<a class="slider__item-btn" href="{{ item.url }}">More</a>{% endif %} #}
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        <a class="slider__control slider__control--prev" data-slider-control-prev href="#" role="button">prev</a>
+        <a class="slider__control slider__control--next" data-slider-control-next href="#" role="button">next</a>
+        <div class="slider__dots" data-slider-dots></div>
+    </div>
+
+</div>

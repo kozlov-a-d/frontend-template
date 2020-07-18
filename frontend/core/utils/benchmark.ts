@@ -41,6 +41,7 @@ const Benchmarks = (() => {
                     `[benchmark] "${benchmark.name}" - ${(benchmark.timeEnd - benchmark.timeStart).toFixed(4)} ms.`
                 );
         });
+        benchmarks.splice(0, benchmarks.length);
     };
 
     return Object.freeze({

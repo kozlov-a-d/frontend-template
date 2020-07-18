@@ -1,0 +1,107 @@
+<div class="demo-buttons">
+    <div class="demo-buttons__container">
+        <h2>Buttons class (content.css)</h2>
+        <div>
+            <a class="btn-primary" href="#">btn-primary</a>
+            <a class="btn-secondary" href="#">btn-secondary</a>
+            <a class="btn-danger" href="#">btn-danger</a>
+            <a class="btn-warn" href="#">btn-warn</a>
+            <a class="btn-success" href="#">btn-success</a>
+        </div>
+        <br>
+        <div>
+            <a class="btn-primary-border" href="#">btn-primary</a>
+            <a class="btn-secondary-border" href="#">btn-secondary</a>
+            <a class="btn-danger-border" href="#">btn-danger</a>
+            <a class="btn-warn-border" href="#">btn-warn</a>
+            <a class="btn-success-border" href="#">btn-success</a>
+        </div>
+        <br>
+        <div>
+            <a class="btn-primary btn-center" href="#">btn-primary + btn-center</a>
+        </div>
+        <br>
+        <div>
+            <a class="btn-primary btn-fullwidth" href="#">btn-primary + btn-fullwidth</a>
+        </div>
+        <h2>Buttons class (mixin)</h2>
+        <div class="demo-buttons__list">
+            <div class="demo-buttons__item">
+                <a class="demo-buttons__btn-primary" href="">Primary</a>
+                <code>
+                    <pre>@include btn;</pre>
+                    <pre>@include btn-primary;</pre>
+                </code>
+            </div>
+            <div class="demo-buttons__item">
+                <a class="demo-buttons__btn-secondary" href="">Pecondary</a>
+                <code>
+                    <pre>@include btn;</pre>
+                    <pre>@include btn-secondary;</pre>
+                </code>
+            </div>
+            <div class="demo-buttons__item is-danger">
+                <a class="demo-buttons__btn-whatsapp" href="">WhatsApp</a>
+                <code>
+                    <pre>@include btn;</pre>
+                    <pre>@include btn-whatsapp;</pre>
+                </code>
+            </div>
+            <div class="demo-buttons__item">
+                <a class="demo-buttons__btn-custom-filled" href="">custom</a>
+                <code>
+                    <pre>@include btn;</pre>
+                    <pre>@include btn-fill($color-primary-light, $color-secondary-light);</pre>
+                    <pre>@include btn-color(#fff);</pre>
+                </code>
+            </div>
+            <div class="demo-buttons__item">
+                <a class="demo-buttons__btn-custom-bordered" href="">custom-bordered</a>
+                <code>
+                    <pre>@include btn;</pre>
+                    <pre>@include btn-fill(#fff, $color-secondary-dark);</pre>
+                    <pre>@include btn-border($color-secondary, $color-secondary-dark);</pre>
+                    <pre>@include btn-color($color-secondary, #fff);</pre>
+                </code>
+            </div>
+            <div class="demo-buttons__item is-danger">
+                <a class="demo-buttons__btn-custom-filled-icon-left" href="">with icon left</a>
+                <code>
+                    <pre>@include btn;</pre>
+                    <pre></pre>
+                </code>
+            </div>
+            <div class="demo-buttons__item is-danger">
+                <a class="demo-buttons__btn-custom-bordered-icon-right" href="">with icon right</a>
+                <code>
+                    <pre>@include btn;</pre>
+                    <pre></pre>
+                </code>
+            </div>
+            <div class="demo-buttons__item is-danger">
+                <a class="demo-buttons__btn-custom-filled-icon-double" href="">with 2 icons</a>
+                <code>
+                    <pre>@include btn;</pre>
+                    <pre></pre>
+                </code>
+            </div>
+            <div class="demo-buttons__item">
+                <a class="demo-buttons__btn-primary-center" href="">Center</a>
+                <code>
+                    <pre>@include btn;</pre>
+                    <pre>@include btn-primary;</pre>
+                    <pre>@include btn-center;</pre>
+                    <pre>width: 200px;  // default width: 250px</pre>
+                </code>
+            </div>
+            <div class="demo-buttons__item">
+                <a class="demo-buttons__btn-primary-fullwidth" href="">Fullwidth</a>
+                <code>
+                    <pre>@include btn;</pre>
+                    <pre>@include btn-primary;</pre>
+                    <pre>@include btn-fullwidth;</pre>
+                </code>
+            </div>
+        </div>
+    </div>
+</div>

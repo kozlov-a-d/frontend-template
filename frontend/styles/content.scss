@@ -1,11 +1,16 @@
 @import './variables.scss';
-@import './mixins/index.scss'; 
+@import './mixins.scss'; 
+
+@import './base/normalize.scss';
+@import './base/layout.scss'; 
+@import './base/text.scss'; 
 
 @import './content/buttons.scss';
 @import './content/display.scss';
 @import './content/grid.scss';
 @import './content/order.scss';
 @import './content/response-img.scss';
+@import './content/section.scss';
 
 @include grid-init(10); // задаем количество колонок по умолчанию
 
@@ -18,3 +23,5 @@
 .is-danger{
     border: 2px solid $color-danger;
 }
+
+@import './components/slider.scss';
