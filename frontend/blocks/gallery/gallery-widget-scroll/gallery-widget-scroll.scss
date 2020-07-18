@@ -35,7 +35,13 @@
                         & ~ .gallery-widget-scroll__tile{
                             transform: translate3d($moveRight, 0, 0);
                         }
-                        
+                        &:first-child {
+                            transform: translate3d(-1*$moveLeft, 0, 0) scale($growFactor);
+
+                            & ~ .gallery-widget-scroll__tile{
+                                transform: translate3d($moveRight + -1*$moveLeft, 0, 0);
+                            }
+                        }
                     }
                 }
             }
