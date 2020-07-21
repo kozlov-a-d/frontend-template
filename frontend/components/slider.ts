@@ -1,5 +1,5 @@
-import Component, {ComponentDefaultOptions} from '../core/abstracts/component';
-import {SliderController} from '../core/utils/slider-controller';
+import Component, { ComponentDefaultOptions } from '../core/abstracts/component';
+import { SliderController } from '../core/utils/slider-controller';
 
 // TODO: доделать
 
@@ -14,15 +14,13 @@ const defaults: ComponentDefaultOptions = {
     data: {
         // isOpen: false,
         // isToggleText: false,
-        // textOpen: null,
-        // textClose: null
-    } 
-}
+    },
+};
 
 export default class Slider extends Component {
     elements: { [key: string]: HTMLElement };
-    
-    constructor(root: HTMLElement, options?: {[key: string]: any}){
+
+    constructor(root: HTMLElement, options?: { [key: string]: any }) {
         super(root, defaults, options);
         this.elements = this.findElements();
         this.init();
@@ -31,7 +29,7 @@ export default class Slider extends Component {
     }
 
     private findElements() {
-        let elements: { [key: string]: HTMLElement} = {};
+        let elements: { [key: string]: HTMLElement } = {};
         Object.keys(this.selectors).forEach((selector) => {
             const element = this.root.querySelector(this.selectors[selector]);
             if (element) elements[selector] = element as HTMLElement;
@@ -40,7 +38,5 @@ export default class Slider extends Component {
         return elements;
     }
 
-    private init() {
-        
-    }
+    private init() {}
 }

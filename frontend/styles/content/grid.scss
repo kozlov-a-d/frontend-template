@@ -1,4 +1,4 @@
-.grid{
+.grid {
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
@@ -6,19 +6,19 @@
     margin-left: -$grid-gap/2;
     margin-right: -$grid-gap/2;
 
-    overflow: hidden; 
+    overflow: hidden;
 
-    [class *= "col-"] {
+    [class*='col-'] {
         margin-left: $grid-gap/2;
         margin-right: $grid-gap/2;
         margin-bottom: $grid-gap-bottom;
     }
 
-    .col-1-1{
+    .col-1-1 {
         margin-bottom: 0;
     }
 
-    .row{
+    .row {
         display: flex;
         width: 100%;
     }
@@ -28,8 +28,8 @@
 /*  Генерируем классы для инлайнового варианта  */
 /*==========================================================================================*/
 
-@mixin grid-sizer($total-columns, $screen-prefix){
-    $col-widths: ();   // вспомогательный массив, в котором будут храниться размеры
+@mixin grid-sizer($total-columns, $screen-prefix) {
+    $col-widths: (); // вспомогательный массив, в котором будут храниться размеры
     // генерируем дробные размеры
     @for $i from 1 through $total-columns {
         @for $j from 1 through $i {
@@ -37,17 +37,17 @@
             $width: ($j/$i);
             // если такого размера ещё не было, то создаём стили
             @if not index($col-widths, $width) {
-                $width-col: 'calc(' + $width * 100% + ' - ' +  $grid-gap + ')';
+                $width-col: 'calc(' + $width * 100% + ' - ' + $grid-gap + ')';
                 // разделение на медиа
-                @if($screen-prefix != ''){
+                @if ($screen-prefix != '') {
                     .col-#{$screen-prefix}-#{$j}-#{$i} {
-                        width:  unquote($width-col);
+                        width: unquote($width-col);
                     }
                 }
                 // и стандартные
                 @else {
                     .col-#{$j}-#{$i} {
-                        width:  unquote($width-col);
+                        width: unquote($width-col);
                     }
                 }
                 // и записываем размер в массив существуюих размеров
@@ -57,7 +57,7 @@
     }
 }
 
-@mixin grid-sizer-media($total-columns, $breakpoints){
+@mixin grid-sizer-media($total-columns, $breakpoints) {
     // проходим про всем разрешениям и генерируем медиа запросы
     @each $screen-prefix, $screen-size in $breakpoints {
         @media (min-width: $screen-size) {

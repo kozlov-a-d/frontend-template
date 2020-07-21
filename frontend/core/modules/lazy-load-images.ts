@@ -8,7 +8,7 @@ export default class LazyLoadImagesModule {
         this.isActive = false;
         if ('IntersectionObserver' in window) {
             this.isActive = true;
-            this.observer = new IntersectionObserver(((entries) => {
+            this.observer = new IntersectionObserver((entries) => {
                 entries.forEach((entry) => {
                     if (entry.isIntersecting) {
                         const image = entry.target as HTMLImageElement;
@@ -20,7 +20,7 @@ export default class LazyLoadImagesModule {
                         this.observer.unobserve(image);
                     }
                 });
-            }));
+            });
         }
     }
 

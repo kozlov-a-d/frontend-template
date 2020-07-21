@@ -1,4 +1,4 @@
-import Component, {ComponentDefaultOptions} from '../core/abstracts/component';
+import Component, { ComponentDefaultOptions } from '../core/abstracts/component';
 
 const defaults: ComponentDefaultOptions = {
     name: 'Spoiler',
@@ -10,14 +10,14 @@ const defaults: ComponentDefaultOptions = {
         isOpen: false,
         isToggleText: false,
         textOpen: null,
-        textClose: null
-    } 
-}
+        textClose: null,
+    },
+};
 
 export default class Spoiler extends Component {
     elements: { [key: string]: HTMLElement };
-    
-    constructor(root: HTMLElement, options?: {[key: string]: any}){
+
+    constructor(root: HTMLElement, options?: { [key: string]: any }) {
         super(root, defaults, options);
 
         this.elements = this.findElements();
@@ -28,7 +28,7 @@ export default class Spoiler extends Component {
     }
 
     private findElements() {
-        let elements: { [key: string]: HTMLElement} = {};
+        let elements: { [key: string]: HTMLElement } = {};
         Object.keys(this.selectors).forEach((selector) => {
             const element = this.root.querySelector(this.selectors[selector]);
             if (element) elements[selector] = element as HTMLElement;
@@ -59,7 +59,7 @@ export default class Spoiler extends Component {
         if (this.data.isToggleText) this.elements.btn.innerHTML = this.data.textClose as string;
     }
 
-    public toggle(){
+    public toggle() {
         this.data.isOpen ? this.close() : this.open();
     }
 

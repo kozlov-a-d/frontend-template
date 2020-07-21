@@ -15,22 +15,21 @@ a {
     }
 }
 
-
 /*====================================================================================================================*/
 /*                                                     HEADING                                                        */
 /*====================================================================================================================*/
 
-h1{
+h1 {
     font-family: $font-heading;
     font-weight: 600;
     font-size: 32px;
     line-height: 109%;
-    margin: $text-margin*2.5 0 $text-margin;
+    margin: $text-margin * 2.5 0 $text-margin;
     color: $color-heading;
 
     @media (min-width: $mobile) {
         font-size: 46px;
-        margin: $text-margin*2.5 0 $text-margin;
+        margin: $text-margin * 2.5 0 $text-margin;
     }
 
     .home-page & {
@@ -38,17 +37,17 @@ h1{
     }
 }
 
-h2{
+h2 {
     font-family: $font-heading;
     font-weight: 600;
     font-size: 24px;
     line-height: 137%;
-    margin: $text-margin*2 0 $text-margin;
+    margin: $text-margin * 2 0 $text-margin;
     color: $color-heading;
 
     @media (min-width: $mobile) {
         font-size: 30px;
-        margin: $text-margin*2 0 $text-margin;
+        margin: $text-margin * 2 0 $text-margin;
     }
 
     .home-page & {
@@ -56,28 +55,29 @@ h2{
     }
 }
 
-h3{
+h3 {
     font-family: $font-heading;
     font-weight: 600;
     font-size: 18px;
     line-height: 137%;
-    margin: $text-margin*1.5 0 $text-margin;
+    margin: $text-margin * 1.5 0 $text-margin;
     color: $color-heading;
 
     @media (min-width: $mobile) {
         font-size: 22px;
-        margin: $text-margin*1.5 0 $text-margin;
+        margin: $text-margin * 1.5 0 $text-margin;
     }
 }
 
-h1, h2, h3 {
-    
-    a{
+h1,
+h2,
+h3 {
+    a {
         display: inline;
         color: $color-heading;
         text-decoration: none;
         border-bottom: 1px solid $color-heading;
-        
+
         &:hover {
             border-bottom: 1px solid transparent;
         }
@@ -92,7 +92,7 @@ p,
 ul,
 ol,
 table,
-pre{
+pre {
     line-height: 140%;
     margin: $text-margin 0;
 }
@@ -101,14 +101,15 @@ pre{
     margin-bottom: $text-margin;
 }
 
-ul,ol {
+ul,
+ol {
     padding-left: 22px;
     li {
         margin: 3px 0;
     }
 }
 
-p+ul,
-p+ol {
+p + ul,
+p + ol {
     margin-top: -($text-margin - 3px);
 }

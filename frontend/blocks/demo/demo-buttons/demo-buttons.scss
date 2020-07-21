@@ -1,19 +1,19 @@
 @import '../../../styles/variables.scss';
-@import '../../../styles/mixins.scss'; 
+@import '../../../styles/mixins.scss';
 
-.demo-buttons{
+.demo-buttons {
     $gap: $text-margin;
 
-    &__container{
+    &__container {
         @include l-container;
         padding: 40px 0;
     }
 
-    &__list{
+    &__list {
         @include grid($gap);
     }
 
-    &__item{
+    &__item {
         @include grid-col(1, $gap);
         margin-bottom: $gap;
         padding: 15px;
@@ -23,64 +23,64 @@
         @media (min-width: $mobile) {
             @include grid-col(1/2, $gap);
         }
-    }    
-    
-    &__btn{
-        &-primary{
+    }
+
+    &__btn {
+        &-primary {
             @include btn;
             @include btn-primary;
         }
 
-        &-secondary{
+        &-secondary {
             @include btn;
             @include btn-secondary;
         }
 
-        &-whatsapp{
+        &-whatsapp {
             @include btn;
             @include btn-whatsapp;
         }
 
-        &-custom-filled{
+        &-custom-filled {
             @include btn;
             @include btn-fill($color-primary-light, $color-secondary-light);
             @include btn-color(#fff);
         }
 
-        &-custom-bordered{
+        &-custom-bordered {
             @include btn;
             @include btn-fill(#fff, $color-secondary-dark);
             @include btn-border($color-secondary, $color-secondary-dark);
             @include btn-color($color-secondary, #fff);
         }
 
-        &-custom-filled-icon-left{
+        &-custom-filled-icon-left {
             @include btn;
             @include btn-fill($color-primary-light, $color-secondary-light);
             @include btn-color(#fff);
         }
 
-        &-custom-bordered-icon-right{
+        &-custom-bordered-icon-right {
             @include btn;
             @include btn-fill(#fff, $color-secondary-dark);
             @include btn-border($color-secondary, $color-secondary-dark);
             @include btn-color($color-secondary, #fff);
         }
 
-        &-custom-filled-icon-double{
+        &-custom-filled-icon-double {
             @include btn;
             @include btn-fill($color-primary-light, $color-secondary-light);
             @include btn-color(#fff);
         }
 
-        &-primary-center{
+        &-primary-center {
             @include btn;
             @include btn-primary;
             @include btn-center;
             width: 200px;
         }
 
-        &-primary-fullwidth{
+        &-primary-fullwidth {
             @include btn;
             @include btn-primary;
             @include btn-fullwidth;

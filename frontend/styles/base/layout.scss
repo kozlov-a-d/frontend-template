@@ -1,5 +1,5 @@
- .l{
-    &-wrapper{
+.l {
+    &-wrapper {
         position: relative;
         display: flex;
         flex-direction: column;
@@ -7,24 +7,24 @@
         min-height: 100vh;
     }
 
-    &-header{
+    &-header {
         position: relative;
         z-index: 10;
         width: 100%;
     }
 
-    &-main{
+    &-main {
         position: relative;
         z-index: 5;
         flex: 1 0 auto;
         width: 100%;
-        
+
         .inner-page & {
             padding-bottom: 50px;
         }
     }
 
-    &-footer{
+    &-footer {
         position: relative;
         width: 100%;
     }

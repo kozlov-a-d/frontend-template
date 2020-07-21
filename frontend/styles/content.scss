@@ -1,9 +1,9 @@
 @import './variables.scss';
-@import './mixins.scss'; 
+@import './mixins.scss';
 
 @import './base/normalize.scss';
-@import './base/layout.scss'; 
-@import './base/text.scss'; 
+@import './base/layout.scss';
+@import './base/text.scss';
 
 @import './content/buttons.scss';
 @import './content/display.scss';
@@ -14,13 +14,13 @@
 
 @include grid-init(10); // задаем количество колонок по умолчанию
 
-.is-success{
+.is-success {
     border: 2px solid $color-success;
 }
-.is-warn{
+.is-warn {
     border: 2px solid $color-warn;
 }
-.is-danger{
+.is-danger {
     border: 2px solid $color-danger;
 }
 

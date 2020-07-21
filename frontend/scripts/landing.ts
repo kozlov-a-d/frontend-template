@@ -9,5 +9,3 @@ import '../blocks/footer/footer';
 
 Benchmarks.end('All Script');
 Benchmarks.info();
-
-

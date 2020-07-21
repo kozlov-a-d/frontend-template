@@ -2,7 +2,7 @@
 export default class EventEmitterMixin {
     events: { [key: string]: Function[] };
 
-    private isEventsListExist () {
+    private isEventsListExist() {
         if (typeof this.events === 'undefined') this.events = {};
     }
 

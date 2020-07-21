@@ -9,14 +9,14 @@ Benchmarks.start('App');
 /** Main class */
 class DarvinApp {
     debagMode: boolean;
-    screen: ScreenModule; 
+    screen: ScreenModule;
     modules: {
-        lazyLoadImages: LazyLoadImagesModule,
-    }
+        lazyLoadImages: LazyLoadImagesModule;
+    };
 
-    constructor(){
+    constructor() {
         this.debagMode = true;
-        this.screen = ScreenModule.getInstance(); 
+        this.screen = ScreenModule.getInstance();
         this.modules = {
             lazyLoadImages: LazyLoadImagesModule.getInstance(),
         };
@@ -27,7 +27,12 @@ class DarvinApp {
         console.info(`debagMode is ${this.debagMode} ${text}`);
     }
 
-    public initComponent(component: any, selector: string, options?: {[key: string]: any}, requestIdlecallback?: boolean) {
+    public initComponent(
+        component: any,
+        selector: string,
+        options?: { [key: string]: any },
+        requestIdlecallback?: boolean
+    ) {
         // document.addEventListener('DOMContentLoaded', () => {
         document.querySelectorAll(selector).forEach((element) => {
             Benchmarks.start(component.name);

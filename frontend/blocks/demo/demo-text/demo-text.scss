@@ -1,9 +1,8 @@
 @import '../../../styles/variables.scss';
-@import '../../../styles/mixins.scss'; 
+@import '../../../styles/mixins.scss';
 
-.demo-text{
-
-    &__container{
+.demo-text {
+    &__container {
         @include l-container;
         padding: 20px 0 40px;
 

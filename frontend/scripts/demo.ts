@@ -13,7 +13,7 @@ import '../blocks/gallery/gallery-widget-scroll/gallery-widget-scroll';
 
 import '../blocks/demo/demo-colors/demo-colors';
 import '../blocks/demo/demo-text/demo-text';
-import '../blocks/demo/demo-text-invert/demo-text-invert'; 
+import '../blocks/demo/demo-text-invert/demo-text-invert';
 import '../blocks/demo/demo-buttons/demo-buttons';
 import '../blocks/demo/demo-section/demo-section';
 

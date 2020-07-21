@@ -1,20 +1,20 @@
 @import '../../../styles/variables.scss';
-@import '../../../styles/mixins.scss'; 
+@import '../../../styles/mixins.scss';
 
-.gallery-widget-scroll{
+.gallery-widget-scroll {
     $duration: 450ms;
     $tileWidth: 300px;
     $tileHeight: 200px;
     $growFactor: 1.5; // 1.5 times the original size
-    
+
     $moveLeft: -($tileWidth * ($growFactor - 1) / 2);
     $moveRight: $tileWidth * ($growFactor - 1);
 
-    &__row{
+    &__row {
         overflow: scroll;
-        width: 100%; 
+        width: 100%;
 
-        &-inner{
+        &-inner {
             transition: $duration transform;
             font-size: 0;
             white-space: nowrap;
@@ -22,24 +22,24 @@
             padding-bottom: 10px; // Account for OS X scroll bar
 
             // action
-            &:hover{
+            &:hover {
                 transform: translate3d($moveLeft, 0, 0);
 
                 .gallery-widget-scroll__tile {
-                    opacity: .3;
-            
-                    &:hover{
+                    opacity: 0.3;
+
+                    &:hover {
                         transform: scale($growFactor);
                         opacity: 1;
-            
-                        & ~ .gallery-widget-scroll__tile{
+
+                        & ~ .gallery-widget-scroll__tile {
                             transform: translate3d($moveRight, 0, 0);
                         }
                         &:first-child {
-                            transform: translate3d(-1*$moveLeft, 0, 0) scale($growFactor);
+                            transform: translate3d(-1 * $moveLeft, 0, 0) scale($growFactor);
 
-                            & ~ .gallery-widget-scroll__tile{
-                                transform: translate3d($moveRight + -1*$moveLeft, 0, 0);
+                            & ~ .gallery-widget-scroll__tile {
+                                transform: translate3d($moveRight + -1 * $moveLeft, 0, 0);
                             }
                         }
                     }
@@ -59,23 +59,23 @@
         transition: $duration all;
         transform-origin: center left;
 
-        &:hover &-details{
+        &:hover &-details {
             opacity: 1;
         }
 
-        &-img{
+        &-img {
             width: $tileWidth;
             height: $tileHeight;
             object-fit: cover;
         }
 
-        &-details{
+        &-details {
             @include l-block-full;
             opacity: 0;
-            background: linear-gradient(to top, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0) 100%);
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0) 100%);
             transition: $duration opacity;
         }
-        
+
         &-title {
             position: absolute;
             bottom: 0;

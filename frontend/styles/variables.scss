@@ -2,13 +2,13 @@
 /*                                                      MEDIA                                                         */
 /*====================================================================================================================*/
 $mobile: 980px;
-$xxs: 375px;     /* iphone X в портретной ориентации */
-$xs: 414px;      /* iphone plus в портретной ориентации */
-$sm: 568px;      /* iphone X в альбомной ориентации */
-$md: 768px;      /* планшеты в портретной ориентации / телефоны в альбомной */
-$lg: 1024px;     /* планшеты в альбомной ориентации */
-$xl: 1280px;     /* ноутбуки */
-$xxl: 1600px;  
+$xxs: 375px; /* iphone X в портретной ориентации */
+$xs: 414px; /* iphone plus в портретной ориентации */
+$sm: 568px; /* iphone X в альбомной ориентации */
+$md: 768px; /* планшеты в портретной ориентации / телефоны в альбомной */
+$lg: 1024px; /* планшеты в альбомной ориентации */
+$xl: 1280px; /* ноутбуки */
+$xxl: 1600px;
 
 $breakpoints: (
     xxs: $xxs,
@@ -20,59 +20,57 @@ $breakpoints: (
     xxl: $xxl,
 ) !default;
 
-
 /*====================================================================================================================*/
 /*                                                      LAYOUT                                                        */
 /*====================================================================================================================*/
 
-$content-width: 1170px;  /* ширина контена */
-$content-gap: 15px;      /* боковой отступ контента ( на адаптиве ) */
+$content-width: 1170px; /* ширина контена */
+$content-gap: 15px; /* боковой отступ контента ( на адаптиве ) */
 
-$grid-gap: 26px;         /* отступ по вертикали для inline-grid */
-$grid-gap-bottom: 20px;  /* отступ по вертикали для inline-grid  */
-
+$grid-gap: 26px; /* отступ по вертикали для inline-grid */
+$grid-gap-bottom: 20px; /* отступ по вертикали для inline-grid  */
 
 /*====================================================================================================================*/
 /*                                                      FONTS                                                         */
 /*====================================================================================================================*/
 
-$font-primary: 'Roboto', sans-serif;             /* основной шрифт */
-$font-secondary: $font-primary;                  /* дополнительный шрифт если есть*/
-$font-size-base: 16px;                           /* базовый размер шрифта */
+$font-primary: 'Roboto', sans-serif; /* основной шрифт */
+$font-secondary: $font-primary; /* дополнительный шрифт если есть*/
+$font-size-base: 16px; /* базовый размер шрифта */
 $font-weight-base: 400;
-$line-height-base: 131%;                         /* базовый междустрочный интервал */
+$line-height-base: 131%; /* базовый междустрочный интервал */
 
-$font-heading: $font-primary;                    /* шрифт для заголовков*/
+$font-heading: $font-primary; /* шрифт для заголовков*/
 
-$text-margin: 15px;                              /* отступ между элементами в тексте */
+$text-margin: 15px; /* отступ между элементами в тексте */
 
 /*====================================================================================================================*/
 /*                                                      COLORS                                                        */
 /*====================================================================================================================*/
 
-$color-text: #16181F;                 /* базовый цвет текста */
-$color-text-invert: #F4F5F7;          /* инвертированый цвет текста */
+$color-text: #16181f; /* базовый цвет текста */
+$color-text-invert: #f4f5f7; /* инвертированый цвет текста */
 $color-heading: $color-text;
 $color-heading-invert: $color-text-invert;
 
-$color-primary: #0052CC;
-$color-primary-dark: #0747A6;
-$color-primary-light: #0065FF;
-$color-primary-invert: #B3D4FF;
-$color-secondary: #5243AA;
+$color-primary: #0052cc;
+$color-primary-dark: #0747a6;
+$color-primary-light: #0065ff;
+$color-primary-invert: #b3d4ff;
+$color-secondary: #5243aa;
 $color-secondary-dark: #403294;
-$color-secondary-light: #6554C0;
-$color-secondary-invert: #C0B6F2;
+$color-secondary-light: #6554c0;
+$color-secondary-invert: #c0b6f2;
 
-$color-danger: #DE350B;
-$color-danger-dark: #B92500;
-$color-danger-light: #FF5630;
-$color-warn: #FF991F;
-$color-warn-dark: #FF8B00;
-$color-warn-light: #FFAB00;
-$color-success: #00875A;
+$color-danger: #de350b;
+$color-danger-dark: #b92500;
+$color-danger-light: #ff5630;
+$color-warn: #ff991f;
+$color-warn-dark: #ff8b00;
+$color-warn-light: #ffab00;
+$color-success: #00875a;
 $color-success-dark: #006644;
-$color-success-light: #2CBD80;
+$color-success-light: #2cbd80;
 $color-whatsapp: #0ebc53;
 $color-whatsapp-hover: #08a045;
 $color-disable: #cdd1d3;
@@ -86,13 +84,11 @@ $btn-padding: 20px;
 $btn-border-width: 2px;
 $btn-border-radius: 5px;
 
-
 /*====================================================================================================================*/
 /*                                                      BLOCKS                                                        */
 /*====================================================================================================================*/
 
 $block-border-radius: 5px;
-
 
 /*====================================================================================================================*/
 /*                                                    TRANSITION                                                      */

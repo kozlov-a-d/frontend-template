@@ -4,9 +4,7 @@
             <div class="modal__bg js-modal-close"></div>
             <div class="modal__container">
                 <button class="modal__btn-close js-modal-close">Close</button>
-                <div class="modal__scroll">
-
-                </div>
+                <div class="modal__scroll"></div>
             </div>
             <div class="modal__loader"></div>
         </div>
@@ -14,13 +12,12 @@
 </template>
 
 <script>
-    export default {
-        props: ['details'],
-        data() {
-            return {
-            };
-        }
-    };
+export default {
+    props: ['details'],
+    data() {
+        return {};
+    },
+};
 </script>
 
 <style lang="scss" scoped>
@@ -31,7 +28,6 @@
     $close-btn-hover: #868b95;
     $time-open: 0.4s;
     $time-close: 0.6s;
-
 
     position: fixed;
     left: 0;
@@ -69,9 +65,7 @@
         background: none;
         cursor: pointer;
         z-index: 20;
-
     }
-
 
     &__container {
         position: relative;
@@ -82,7 +76,7 @@
         overflow-x: hidden;
         background: $bg-content;
         padding: 40px 20px;
-        animation: overlay__container-show $time-open*2 ease-in-out;
+        animation: overlay__container-show $time-open * 2 ease-in-out;
         border-radius: 6px;
     }
 
@@ -95,7 +89,6 @@
         text-align: center;
         margin-bottom: 30px;
         margin-top: 0;
-
     }
 
     //  utilities
@@ -132,7 +125,7 @@
 }
 
 @keyframes overlay-closing {
-    from{
+    from {
         opacity: 1;
     }
     to {
@@ -141,7 +134,7 @@
 }
 
 @keyframes overlay__container-show {
-    from{
+    from {
         opacity: 0;
         transform: translate3d(0, 15px, 0);
     }
@@ -161,5 +154,4 @@
         transform: translate3d(0, 15px, 0);
     }
 }
-
 </style>

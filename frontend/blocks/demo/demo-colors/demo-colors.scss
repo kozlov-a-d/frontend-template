@@ -1,12 +1,12 @@
 @import '../../../styles/variables.scss';
-@import '../../../styles/mixins.scss'; 
+@import '../../../styles/mixins.scss';
 
-.demo-colors{
+.demo-colors {
     $gap: $text-margin;
     // border-top: 1px solid $color-disable;
     // border-bottom: 1px solid $color-disable;
 
-    &__container{
+    &__container {
         @include l-container;
         padding: 10px 0 30px;
 
@@ -15,17 +15,17 @@
         }
     }
 
-    &__list{
+    &__list {
         @include grid($gap);
     }
 
-    &__item{
+    &__item {
         margin-bottom: $gap;
-       
+
         border-radius: $block-border-radius;
         overflow: hidden;
 
-        .-accent &{
+        .-accent & {
             @include grid-col(1, $gap);
 
             @media (min-width: $mobile) {
@@ -33,7 +33,7 @@
             }
         }
 
-        .-utils &{
+        .-utils & {
             @include grid-col(1, $gap);
 
             @media (min-width: $mobile) {
@@ -41,70 +41,70 @@
             }
         }
 
-        &-color{
+        &-color {
             height: 50px;
             padding: 0 20px;
             line-height: 50px;
             font-weight: 600;
             color: #fff;
 
-            &.-color-primary-dark{
+            &.-color-primary-dark {
                 background: $color-primary-dark;
             }
 
-            &.-color-primary{
+            &.-color-primary {
                 background: $color-primary;
             }
 
-            &.-color-primary-light{
+            &.-color-primary-light {
                 background: $color-primary-light;
             }
 
-            &.-color-secondary-dark{
+            &.-color-secondary-dark {
                 background: $color-secondary-dark;
             }
 
-            &.-color-secondary{
+            &.-color-secondary {
                 background: $color-secondary;
             }
 
-            &.-color-secondary-light{
+            &.-color-secondary-light {
                 background: $color-secondary-light;
             }
 
-            &.-color-danger-dark{
+            &.-color-danger-dark {
                 background: $color-danger-dark;
             }
 
-            &.-color-danger{
+            &.-color-danger {
                 background: $color-danger;
             }
 
-            &.-color-danger-light{
+            &.-color-danger-light {
                 background: $color-danger-light;
             }
 
-            &.-color-warn-dark{
+            &.-color-warn-dark {
                 background: $color-warn-dark;
             }
 
-            &.-color-warn{
+            &.-color-warn {
                 background: $color-warn;
             }
 
-            &.-color-warn-light{
+            &.-color-warn-light {
                 background: $color-warn-light;
             }
 
-            &.-color-success-dark{
+            &.-color-success-dark {
                 background: $color-success-dark;
             }
 
-            &.-color-success{
+            &.-color-success {
                 background: $color-success;
             }
 
-            &.-color-success-light{
+            &.-color-success-light {
                 background: $color-success-light;
             }
         }

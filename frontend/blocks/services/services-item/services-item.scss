@@ -1,13 +1,13 @@
 @import '../../../styles/variables.scss';
-@import '../../../styles/mixins.scss'; 
+@import '../../../styles/mixins.scss';
 
-.services-item{
+.services-item {
     position: relative;
     display: flex;
     flex-direction: column;
     overflow: hidden;
     background: rgb(236, 236, 236);
-        
+
     &__img {
         @include l-block-ratio(0.83);
 
@@ -41,11 +41,11 @@
         text-align: center;
         margin-bottom: 10px;
 
-        &-curr{
+        &-curr {
             font-weight: bold;
         }
 
-        &-full{
+        &-full {
             text-decoration: line-through;
         }
     }

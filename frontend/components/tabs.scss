@@ -1,23 +1,22 @@
 @import '../styles/variables.scss';
-@import '../styles/mixins.scss'; 
+@import '../styles/mixins.scss';
 
-.tabs{
-    $switchToMobile: $md; 
+.tabs {
+    $switchToMobile: $md;
 
-    &__nav{
-        
+    &__nav {
         @media (min-width: $switchToMobile) {
             display: flex;
-            justify-content: flex-start; 
+            justify-content: flex-start;
         }
 
-        &-item{
+        &-item {
             display: block;
             width: 100%;
             padding: 10px 20px;
             border: 1px solid $color-text;
             cursor: pointer;
-            
+
             @media (min-width: $switchToMobile) {
                 padding: 5px 20px;
             }
@@ -27,20 +26,18 @@
                 color: $color-text-invert;
             }
 
-            &:hover{
+            &:hover {
                 background: rgba($color-text, 0.3);
             }
         }
     }
 
-    &__content{
-        
-        &-item{
+    &__content {
+        &-item {
             display: none;
             width: 100%;
             padding: 15px 20px 15px;
             border: 1px solid $color-text;
-            
 
             &.is-active {
                 display: block;

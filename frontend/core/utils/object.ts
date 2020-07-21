@@ -45,7 +45,8 @@ export const deepMerge: IDeepMerge = (target: IObject, ...sources: Array<IObject
                             if (!result[key] || !isObject(result[key])) result[key] = {};
                             deepMerge(result[key], elm[key]);
                         } else {
-                            if (Array.isArray(result[key]) && Array.isArray(elm[key])) result[key] = Array.from(new Set(result[key].concat(elm[key])));
+                            if (Array.isArray(result[key]) && Array.isArray(elm[key]))
+                                result[key] = Array.from(new Set(result[key].concat(elm[key])));
                             else result[key] = elm[key];
                         }
                     }

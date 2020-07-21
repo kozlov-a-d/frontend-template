@@ -17,14 +17,14 @@
 /**
  * @include text-color-invert;
  */
-@import './mixins/text.scss'; 
- 
+@import './mixins/text.scss';
+
 /**
  * @include grid($grid-gap);
  * @include grid-col($grid-width, $grid-gap);
  * @include grid-col-offset($grid-width, $grid-gap);
  */
-@import './mixins/grid.scss'; 
+@import './mixins/grid.scss';
 
 /**
  * @include btn()
@@ -38,9 +38,9 @@
  * @include btn-secondary();
  * @include btn-whatsapp();
  */
-@import './mixins/buttons.scss'; 
+@import './mixins/buttons.scss';
 
 /**
  *
  */
-@import './mixins/section.scss'; 
+@import './mixins/section.scss';

@@ -3,7 +3,7 @@
         <section class="section">
             <div class="section__container">
                 <div class="section__header">
-                    <h2 class="section__heading">{{details.header.heading}}</h2>
+                    <h2 class="section__heading">{{ details.header.heading }}</h2>
                 </div>
                 <div class="section__content">
                     <!-- <p>{{details}}</p> -->
@@ -22,23 +22,22 @@
 </template>
 
 <script>
-    import elementText from './element-text';
-    import elementGallery from './element-gallery';
-    export default {
-        props: ['details'],
-        components: {
-            elementText,
-            elementGallery
-        },
-        data() {
-            return {
-            };
-        }
-    };
+import elementText from './element-text';
+import elementGallery from './element-gallery';
+export default {
+    props: ['details'],
+    components: {
+        elementText,
+        elementGallery,
+    },
+    data() {
+        return {};
+    },
+};
 </script>
 
 <style>
-    .center {
-        text-align: center;
-    }
+.center {
+    text-align: center;
+}
 </style>

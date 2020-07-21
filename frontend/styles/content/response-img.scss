@@ -1,4 +1,4 @@
-.response-img{
+.response-img {
     display: block;
     width: auto !important;
     max-width: 100%;
@@ -7,8 +7,8 @@
     margin: 0 auto 20px !important;
 
     @each $breakpoint in map-keys($breakpoints) {
-        @media (max-width: #{map-get($breakpoints, $breakpoint)}){
-        &-#{$breakpoint}{
+        @media (max-width: #{map-get($breakpoints, $breakpoint)}) {
+            &-#{$breakpoint} {
                 display: block;
                 width: auto !important;
                 max-width: 100%;
